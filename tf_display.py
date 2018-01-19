@@ -151,5 +151,6 @@ for i in range(max_steps):
         else:  # Record a summary
             summary, _ = sess.run([merged, train_step], feed_dict=feed_dict(True))
             train_writer.add_summary(summary, i)
+
 train_writer.close()
 test_writer.close()
